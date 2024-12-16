@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ktl-dbt"
+version = "1.1.4"
+description = "A project description."
+dependencies = [
+    "dbt-core~=1.7.0",
+    "dbt-spark~=1.7.0",
+]
+
+[project.scripts]
+ktl-dbt = "ktl_dbt.cli:ktl_dbt"
+
+[tool.setuptools]
+include-package-data = true
